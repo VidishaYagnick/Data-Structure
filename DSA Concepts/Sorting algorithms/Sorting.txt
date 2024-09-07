@@ -1,0 +1,58 @@
+----->1. Selection Sort : non stable and non adaptive
+
+Space Complexity :  
+The space complexity of the Selection Sort algorithm is analyzed based on the amount of extra memory it requires beyond the input array. 
+Selection Sort is an in-place sorting algorithm, meaning it sorts the array without requiring additional storage space proportional to the input size. Selection Sort requires a constant amount of extra space beyond the input array, making it very efficient in terms of memory usage.
+
+Time complexity : 
+The time complexity of the Selection Sort algorithm is determined by the number of comparisons and swaps it performs.
+
+Time Complexity Analysis : 
+Selection Sort works by repeatedly finding the minimum element from the unsorted portion of the array and swapping it with the first unsorted element.
+
+Here’s a detailed breakdown:
+
+Outer Loop: The outer loop runs from the first element to the second-to-last element. This loop runs 𝑛 − 1 times for an array of
+n elements.
+
+Inner Loop: For each iteration of the outer loop, the inner loop scans the unsorted portion of the array to find the minimum element. The number of comparisons in the inner loop is: 
+    n−1 comparisons in the first iteration,
+    n−2 comparisons in the second iteration,
+    .................
+    1 comparison in the last iteration.
+
+Swaps: There is one swap for each iteration of the outer loop, so there are n−1 swaps in total.
+
+----->2. Bubble Sort :  stable and adaptive after optimisation
+
+Space complexity : 
+The space complexity of the Bubble Sort algorithm is determined by the amount of extra memory it requires beyond the input array. Like Selection Sort, Bubble Sort is also an in-place sorting algorithm, meaning it sorts the array without requiring additional storage space proportional to the input size.
+
+Space Complexity=O(1)
+
+Time complexity :
+**NOTE** : Optimized Best-Case
+In the best case (when the array is already sorted), Bubble Sort can be optimized to stop early if no swaps are made during a pass. This requires a small change to the algorithm to track whether any swaps were made.
+
+Comparisons: Even in the best case, the algorithm still needs to make the initial pass through the array to confirm that it is sorted.
+Swaps: No swaps are made in the best case.
+Total number of comparisons in the best case:
+
+Total Comparisons=n−1
+
+This simplifies to O(n) if the algorithm is optimized with a flag to detect sorted arrays.
+
+----->3. Insertion Sort : stable and adaptive
+Space complexity : O(1)
+
+Time Complexity : O(n^2)
+In 1st pass, 1 possible comparsion and 1 possible swap
+In 2nd pass, 2 possible comparsion and 2 possible swap
+  .
+  .
+  .
+In n-1 pass, n-1 possible comparsion and n-1 possible swap
+
+Total comparsion and swaps = (n-1)n/2
+
+**NOTE** : Best Case : O(n) --> n-1 comparsions and no swaps
